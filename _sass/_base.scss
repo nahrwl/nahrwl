@@ -37,6 +37,34 @@ ul, ol, dl, figure {
 p {
 	font-family: $base-font-family;
 	font-weight: $base-font-weight;
+
+    a {
+        @if $ie
+            color: $brand-color;
+            
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        @else 
+            color: $text-color;
+            border-bottom: 2px solid $trim-color;
+            box-shadow: 0px -3px 0px $trim-color inset;
+
+
+            transition: color $link-transition-speed ease-out, box-shadow $link-transition-speed ease-out, border-bottom $link-transition-speed ease-out;
+            -webkit-transition: color $link-transition-speed ease-out, box-shadow $link-transition-speed ease-out, border-bottom $link-transition-speed ease-out;
+            -moz-transition: color $link-transition-speed ease-out, box-shadow $link-transition-speed ease-out, border-bottom $link-transition-speed ease-out; 
+            -o-transition: color $link-transition-speed ease-out, box-shadow $link-transition-speed ease-out, border-bottom $link-transition-speed ease-out;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $background-color;
+                border-bottom: 2px solid $brand-color;
+                box-shadow: 0px -16px 0px $brand-color inset;
+            }
+    }
 }
 
 /**
@@ -46,6 +74,13 @@ a {
     text-decoration: none;
     color: $brand-color;
 
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+nav a {
     &:hover,
     &:focus {
         text-decoration: underline;
