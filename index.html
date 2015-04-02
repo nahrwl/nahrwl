@@ -1,5 +1,10 @@
 ---
 layout: default
+projects:
+ - name: iCarnival
+   description: iCarnival Punahou Carnival is the official Punahou Carnival iPhone app.
+ - name: CongressJBot
+   description: A robot for tracking the US Congress on reddit.
 ---
 
 
@@ -59,16 +64,16 @@ layout: default
 <div class="pure-u-1-1 pure-u-lg-2-2"></div>
 <div class="pure-u-1-1 pure-u-lg-1-2">
   <div class="inner">
-    <h1 class="page-heading">Posts</h1>
+    <hr>
+    <h1 class="page-heading">Projects</h1>
 
     <ul class="post-list">
-      {% for post in site.posts %}
+      {% for project in page.projects %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <!--<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>-->
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        
+        <p><h2><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.name }}</a></h2>{{ project.description }}</p>
       </li>
       {% endfor %}
     </ul>

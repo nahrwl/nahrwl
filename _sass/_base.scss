@@ -116,7 +116,8 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 li {
@@ -148,6 +149,13 @@ blockquote {
     > :last-child {
         margin-bottom: 0;
     }
+}
+
+/**
+ * Horizontal Rule
+ */
+hr {
+    border: 1px solid $grey-color-light;
 }
 
 

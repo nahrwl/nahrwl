@@ -103,8 +103,8 @@ main {
 }
 
 .post-link {
-    display: block;
-    font-size: 24px;
+    font-size: $base-font-size;
+    font-weight: $bold-font-weight;
 }
 
 
