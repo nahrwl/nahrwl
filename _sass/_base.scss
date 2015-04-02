@@ -1,7 +1,7 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
+body, main, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
@@ -33,6 +33,15 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Paragraphs
+ */
+p {
+    font-weight: 400;
 }
 
 
@@ -96,9 +105,19 @@ a {
         color: darken($brand-color, 15%);
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $text-color;
         text-decoration: underline;
+    }
+}
+
+nav {
+    a {
+        color: $nav-color;
+    }
+    a:visited {
+        color: $nav-color; 
     }
 }
 
@@ -148,6 +167,14 @@ pre {
     }
 }
 
+/**
+ * Inner Wrapper
+ */
+
+ .inner {
+    max-width: 35em;
+    padding: 0 1em 0 1em;
+}
 
 
 /**

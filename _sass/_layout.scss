@@ -1,14 +1,84 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#layout {
+    margin: 4em 4em 0 4em;
+}
+
+/**
+ * Pure Additions
+ */
+
+.pure-menu {
+    font-weight: 700;
+    font-family: 'Inconsolata', 'Menlo', Courier, monospace;
+}
+
+.pure-menu-active > .red-yellow.pure-menu-link,
+.red-yellow.pure-menu-link:hover,
+.red-yellow.pure-menu-link:focus {
+    color: #fff;
+    background-color: #FB2534;
+    background-image:
+    linear-gradient(
+      to top right, 
+      #FB2534, #FBBD26
+    );
+}
+
+.pure-menu-active > .yellow-green.pure-menu-link,
+.yellow-green.pure-menu-link:hover,
+.yellow-green.pure-menu-link:focus {
+    color: #fff;
+    background-color: #90E92F;
+    background-image:
+    linear-gradient(
+      to top right, 
+      #FDF232, #90E92F
+    );
+}
+
+.pure-menu-active > .blue-purple.pure-menu-link,
+.blue-purple.pure-menu-link:hover,
+.blue-purple.pure-menu-link:focus {
+    color: #fff;
+    background-color: #2F1AFE;
+    background-image:
+    linear-gradient(
+      to top right, 
+      #2F1AFE, #FB00FE
+    );
+}
+
+/**
+ * Other Stuff
+ */
+
+#logo-svg {
+    height: 25px;
+    width: 136px;
+}
+
+main {
+    margin-top: 1em;
+    padding: 0.5em;
+}
+
+#social-links > .pure-menu-item a {
+    /*padding: 12.5px; /* 50% of the image height - 25px */
+    height: 64px;
+    width: 64px;
+    text-align: center;
+    padding-top: 19.5px;
+    padding-bottom: 19.5px;
+}
+
 /**
  * Site header
  */
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
-
-    // Positioning context for the mobile navigation icon
-    position: relative;
-}
 
 .site-title {
     font-size: 26px;
@@ -16,73 +86,10 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-
+ 
     &,
     &:visited {
         color: $grey-color-dark;
-    }
-}
-
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
     }
 }
 
@@ -91,7 +98,7 @@
 /**
  * Site footer
  */
-.site-footer {
+/*.site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
 }
@@ -154,7 +161,7 @@
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
-}
+}*/
 
 
 
@@ -202,15 +209,15 @@
     letter-spacing: -1px;
     line-height: 1;
 
-    @include media-query($on-laptop) {
+    /*@include media-query($on-laptop) {
         font-size: 36px;
-    }
+    }*/
 }
 
 .post-content {
     margin-bottom: $spacing-unit;
 
-    h2 {
+    /*h2 {
         font-size: 32px;
 
         @include media-query($on-laptop) {
@@ -232,5 +239,21 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }*/
+}
+
+/**
+ * Media Queries
+ */
+
+ @media screen and (max-width: 48em) {
+    #layout {
+        margin: 4em 0 0 0;
+    }
+}
+
+@media screen and (max-width: 35.5em) {
+    #layout {
+        margin: 1em 0 0 0;
     }
 }
