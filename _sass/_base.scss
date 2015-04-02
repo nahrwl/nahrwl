@@ -39,14 +39,15 @@ p {
 	font-weight: $base-font-weight;
 
     a {
-        @if $ie
+        @if $ie {
             color: $brand-color;
             
             &:hover,
             &:focus {
                 text-decoration: underline;
             }
-        @else 
+        }
+        @else {
             color: $text-color;
             border-bottom: 2px solid $trim-color;
             box-shadow: 0px -3px 0px $trim-color inset;
@@ -64,6 +65,7 @@ p {
                 border-bottom: 2px solid $brand-color;
                 box-shadow: 0px -16px 0px $brand-color inset;
             }
+        }
     }
 }
 
