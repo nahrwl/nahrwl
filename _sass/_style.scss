@@ -1,11 +1,20 @@
 #layout {
-	margin: 4em 4em 0 4em;
+	margin: 4em 4em 0 5em;
 }
 
 .inner {
 	max-width: 35em;
 	margin: 0 auto;
-	padding: 0 1em 0 1em;
+	padding: 0em 1em 0em 1em;
+}
+
+#header {
+        padding: 0;
+}
+
+#bio {
+    margin-top: 1em;
+    padding: 0.5em 1em 0.5em 1em;
 }
 
 .pure-menu {
@@ -55,8 +64,7 @@
 }
 
 main {
-	margin-top: 1em;
-	padding: 0.5em;
+	
 }
 
 #social-links > .pure-menu-item a {
