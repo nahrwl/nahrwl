@@ -45,10 +45,12 @@ $xl:          80em;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
+/*@import
         "base",
         "layout",
         "syntax-highlighting"
-;
+;*/
+
+@import "style";
 
 
