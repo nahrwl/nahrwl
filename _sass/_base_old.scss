@@ -1,8 +1,14 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+/**
+ * Reset some basic elements
+ */
+body, main, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
 }
+
+
 
 /**
  * Basic styling
@@ -11,46 +17,34 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: $base-font-weight;
+    font-weight: 300;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
 
+
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure {
-    @extend %vertical-rhythm;
-    font-family: $base-font-family;
-}
+
 
 /**
  * Paragraphs
  */
 p {
-	font-family: $base-font-family;
-	font-weight: $base-font-weight;
+    font-weight: 400;
 }
 
-/**
- * Links
- */
-a {
-    text-decoration: none;
-    color: $brand-color;
 
-    &:hover,
-    &:focus {
-        text-decoration: underline;
-    }
-}
 
 /**
  * Images
@@ -89,12 +83,44 @@ li {
     }
 }
 
+
+
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $bold-font-weight;
+    font-weight: 300;
 }
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover,
+    &:focus {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+nav {
+    a {
+        color: $nav-color;
+    }
+    a:visited {
+        color: $nav-color; 
+    }
+}
+
 
 
 /**
@@ -140,6 +166,16 @@ pre {
         padding-left: 0;
     }
 }
+
+/**
+ * Inner Wrapper
+ */
+
+ .inner {
+    max-width: 35em;
+    padding: 0 1em 0 1em;
+}
+
 
 /**
  * Clearfix
