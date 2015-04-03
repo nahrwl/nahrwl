@@ -67,25 +67,23 @@ nav {
    }
 }
 
+#social-links {
+    .pure-menu-link {
+        /*padding: 12.5px; /* 50% of the image height - 25px */
+        height: 64px;
+        width: 64px;
+        text-align: center;
+        padding-top: 19.5px;
+        padding-bottom: 19.5px;
+        background-color: $background-color;
+    }
+}
 
 #logo-svg {
 	height: 25px;
 	width: 136px;
 }
 
-main {
-	
-}
-
-#social-links > .pure-menu-item a {
-    /*padding: 12.5px; /* 50% of the image height - 25px */
-    height: 64px;
-    width: 64px;
-    text-align: center;
-    padding-top: 19.5px;
-    padding-bottom: 19.5px;
-    background-color: $background-color;
-}
 
 /**
  * Page content
