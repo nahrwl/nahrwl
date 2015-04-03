@@ -22,41 +22,51 @@
 	font-family: $base-font-family;
 }
 
-.pure-menu-active > .red-yellow.pure-menu-link,
-.red-yellow.pure-menu-link:hover,
-.red-yellow.pure-menu-link:focus {
-	color: #fff;
-    background-color: #FB2534;
-	background-image:
-    linear-gradient(
-      to top right, 
-      #FB2534, #FBBD26
-    );
+nav {
+    .pure-menu-link {
+        box-shadow: 0px 1000px 0px rgba(255,255,255,1) inset;
+
+        transition: box-shadow $link-transition-speed, color $link-transition-speed;
+        -webkit-transition: box-shadow $link-transition-speed, color $link-transition-speed;
+        -moz-transition: box-shadow $link-transition-speed, color $link-transition-speed;
+        -o-transition: box-shadow $link-transition-speed, color $link-transition-speed;
+    }
+
+    .red-yellow {
+        background-color: #FB2534;
+        background-image:
+        linear-gradient(
+          to top right, 
+          #FB2534, #FBBD26
+          );
+    }
+
+    .yellow-green {
+        background-color: #90E92F;
+        background-image:
+        linear-gradient(
+          to top right, 
+          #FDF232, #90E92F
+          );
+    }
+
+    .blue-purple{
+        background-color: #2F1AFE;
+        background-image:
+        linear-gradient(
+          to top right, 
+          #2F1AFE, #FB00FE
+          );
+    }
+
+    .pure-menu-active > .pure-menu-link,
+    .pure-menu-link:hover,
+    .pure-menu-link:focus {
+       color: #fff;
+       box-shadow: 0px 1000px 0px rgba(255,255,255,0) inset;
+   }
 }
 
-.pure-menu-active > .yellow-green.pure-menu-link,
-.yellow-green.pure-menu-link:hover,
-.yellow-green.pure-menu-link:focus {
-	color: #fff;
-    background-color: #90E92F;
-	background-image:
-    linear-gradient(
-      to top right, 
-      #FDF232, #90E92F
-    );
-}
-
-.pure-menu-active > .blue-purple.pure-menu-link,
-.blue-purple.pure-menu-link:hover,
-.blue-purple.pure-menu-link:focus {
-	color: #fff;
-    background-color: #2F1AFE;
-	background-image:
-    linear-gradient(
-      to top right, 
-      #2F1AFE, #FB00FE
-    );
-}
 
 #logo-svg {
 	height: 25px;
