@@ -1,72 +1,46 @@
-#layout {
-	margin: 4em 4em 0 4em;
+
+/**
+ * Home page
+ */
+
+.row {
+    width: 1090px;
+    margin: auto;
+
+    // Vertical rhythm
+    margin-bottom: $base-line-height * 2;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        //vertical-align: text-top;
+
+        @extend %heading;
+    }
+
+    h2 {
+        //vertical-align: text-top;
+        margin: 0;
+    }
+
+    @include media-query($xl) {
+        width: 800px;
+    }
+
+    @include media-query($lg) {
+        background-color: red;
+    }
 }
 
-.inner {
-	max-width: 35em;
-	margin: 0 auto;
-	padding: 0 1em 0 1em;
-}
+#social {
+    white-space: nowrap;
 
-.pure-menu {
-	font-weight: $bold-font-weight;
-	font-family: $base-font-family;
-}
-
-.pure-menu-active > .red-yellow.pure-menu-link,
-.red-yellow.pure-menu-link:hover,
-.red-yellow.pure-menu-link:focus {
-	color: #fff;
-    background-color: #FB2534;
-	background-image:
-    linear-gradient(
-      to top right, 
-      #FB2534, #FBBD26
-    );
-}
-
-.pure-menu-active > .yellow-green.pure-menu-link,
-.yellow-green.pure-menu-link:hover,
-.yellow-green.pure-menu-link:focus {
-	color: #fff;
-    background-color: #90E92F;
-	background-image:
-    linear-gradient(
-      to top right, 
-      #FDF232, #90E92F
-    );
-}
-
-.pure-menu-active > .blue-purple.pure-menu-link,
-.blue-purple.pure-menu-link:hover,
-.blue-purple.pure-menu-link:focus {
-	color: #fff;
-    background-color: #2F1AFE;
-	background-image:
-    linear-gradient(
-      to top right, 
-      #2F1AFE, #FB00FE
-    );
-}
-
-#logo-svg {
-	height: 25px;
-	width: 136px;
-}
-
-main {
-	margin-top: 1em;
-	padding: 0.5em;
-}
-
-#social-links > .pure-menu-item a {
-    /*padding: 12.5px; /* 50% of the image height - 25px */
-    height: 64px;
-    width: 64px;
-    text-align: center;
-    padding-top: 19.5px;
-    padding-bottom: 19.5px;
-    background-color: $background-color;
+    > li {
+        display: inline;
+        padding-right: 40px;
+    }
 }
 
 /**
@@ -147,14 +121,8 @@ main {
 }
 
 
-@media screen and (max-width: 48em) {
-	#layout {
-		margin: 4em 0 0 0;
-	}
-}
-
-@media screen and (max-width: 35.5em) {
-	#layout {
-		margin: 1em 0 0 0;
-	}
+@include media-query($sm) {
+    #container {
+        margin: 25px 0 25px 0;
+    }
 }
