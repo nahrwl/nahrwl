@@ -4,7 +4,7 @@
  */
 
 .row {
-    width: 612px;
+    max-width: 612px;
     padding: 0 $spacing-unit 0 $spacing-unit;
     margin: auto;
 
@@ -12,7 +12,6 @@
     margin-bottom: $base-line-height * 2;
 
     ul {
-        list-style-type: none;
         margin: 0;
         padding-left: $spacing-unit;
         display: inline-block;
@@ -26,10 +25,23 @@
         margin: 0;
     }
 
+    @include media-query($sm) {
+        width: 612px;
+        
+        ul {
+            list-style-type: none;
+        }
+    }
+
+    @include media-query($md) {
+
+    }
+
     @include media-query($lg) {
         // width: 800px;
         padding: 0;
         width: 858px;
+        max-width: 100%;
 
         ul {
             padding: 0;
@@ -38,15 +50,18 @@
 
     @include media-query($xl) {
         width: 1090px;
+        max-width: 100%;
     }
 }
 
 #social {
-    white-space: nowrap;
+    @include media-query($sm) {
+        white-space: nowrap;
 
-    > li {
-        display: inline;
-        padding-right: 40px;
+        > li {
+            display: inline;
+            padding-right: 40px;
+        }
     }
 }
 
