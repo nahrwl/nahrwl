@@ -15,13 +15,19 @@ body {
     color: $text-color;
     background-color: #EEEEEE;
     -webkit-text-size-adjust: 100%;
+
+
 }
 
 #container {
     background-color: $background-color;
-    margin: 25px;
+    margin: $spacing-unit 0 $spacing-unit 0;
     padding-top: 100px;
     padding-bottom: 100px;
+
+    @include media-query($sm) {
+        margin: 25px;
+    }
 }
 
 /**
@@ -30,9 +36,9 @@ body {
 
  %heading {
     font-weight: $bold-font-weight;
-    font-size: $base-font-size * 2;
+    font-size: $base-font-size * 1.6;
     letter-spacing: -1px;
-    line-height: $base-line-height * 2;
+    line-height: $base-line-height * 1.6;
 
     a {
         @if $ie {
@@ -66,8 +72,8 @@ body {
     
 
     @include media-query($xl) {
-        font-size: $base-font-size * 1.5;
-        line-height: $base-line-height * 1.5;
+        font-size: $base-font-size * 2;
+        line-height: $base-line-height * 2;
     }
  }
 

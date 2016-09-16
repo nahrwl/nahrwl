@@ -10,7 +10,7 @@ $bold-font-weight: 500;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 26px;;
 
-$spacing-unit:     30px;
+$spacing-unit:     25px;
 
 $text-color:       #111;
 $background-color: #FFFFFF;
@@ -41,7 +41,7 @@ $link-transition-speed: 0.1s;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
+    @media screen and (min-width: $device) {
         @content;
     }
 }

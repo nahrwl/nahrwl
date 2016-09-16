@@ -4,7 +4,8 @@
  */
 
 .row {
-    width: 1090px;
+    width: 612px;
+    padding: 0 $spacing-unit 0 $spacing-unit;
     margin: auto;
 
     // Vertical rhythm
@@ -13,7 +14,7 @@
     ul {
         list-style-type: none;
         margin: 0;
-        padding: 0;
+        padding-left: $spacing-unit;
         display: inline-block;
         //vertical-align: text-top;
 
@@ -25,12 +26,18 @@
         margin: 0;
     }
 
-    @include media-query($xl) {
-        width: 800px;
+    @include media-query($lg) {
+        // width: 800px;
+        padding: 0;
+        width: 858px;
+
+        ul {
+            padding: 0;
+        }
     }
 
-    @include media-query($lg) {
-        background-color: red;
+    @include media-query($xl) {
+        width: 1090px;
     }
 }
 
@@ -120,9 +127,3 @@
     }*/
 }
 
-
-@include media-query($sm) {
-    #container {
-        margin: 25px 0 25px 0;
-    }
-}
