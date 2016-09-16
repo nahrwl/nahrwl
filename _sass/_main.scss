@@ -3,18 +3,18 @@
 
 
 // Our variables
-$base-font-family: 'Inconsolata', 'Menlo', Courier, monospace;
+$base-font-family: 'Work Sans', Helvetica, sans-serif;
 $base-font-size:   16px;
-$base-font-weight: 400;
-$bold-font-weight: 700;
+$base-font-weight: 300;
+$bold-font-weight: 500;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.2;
+$base-line-height: 26px;;
 
-$spacing-unit:     30px;
+$spacing-unit:     25px;
 
 $text-color:       #111;
-$background-color: #ffffff;
-$brand-color:      #C51F84;
+$background-color: #FFFFFF;
+$brand-color:      Blue;
 $trim-color:       lighten($brand-color, 35%);
 $nav-color:        #777777;
 
@@ -22,7 +22,8 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-$sm:          35.5em;
+//$sm:          35.5em;
+$sm:          41em;
 $md:          48em;
 $lg:          64em;
 $xl:          80em;
@@ -41,7 +42,7 @@ $link-transition-speed: 0.1s;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
+    @media screen and (min-width: $device) {
         @content;
     }
 }
